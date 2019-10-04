@@ -122,7 +122,7 @@ chooseImg:(that)=>{
             content: this.data.content,
           },
           success: (res) => {
-            this.setData({ id: res.data.data.id });
+            this.setData({ id: this.data.id });
             wx.showToast({
               title: '发布成功',
             })
