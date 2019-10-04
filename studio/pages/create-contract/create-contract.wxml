@@ -5,9 +5,9 @@
     
     <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
     
-    <picker mode="date" value="{{dates}}" start="2019-01-01" end="2020-09-01">
+    <picker mode="date" value="{{basic.signTime}}" bindchange="bindSignTimeChange" start="2019-01-01" end="2020-09-01">
     <view class="field">
-      当前选择: {{dates}}
+      当前选择: {{basic.signTime}}
     </view>
   </picker>
   </view>
@@ -41,9 +41,9 @@
   <view class='namebox'>
     <text class='name'>到期时间</text>
     <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
-   <picker mode="date" value="{{dates}}" start="2019-01-01" end="2020-09-01" bindchange="bindDateChange">
+   <picker mode="date" value="{{basic.expiredTime}}" start="2019-01-01" end="2020-09-01" bindchange="bindDateChange">
     <view class="field">
-      当前选择: {{dates}}
+      当前选择: {{basic.expiredTime}}
     </view>
   </picker>
 </view> 

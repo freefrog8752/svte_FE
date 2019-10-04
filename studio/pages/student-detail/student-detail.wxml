@@ -19,12 +19,12 @@
   <view class='setting-input-wrap'>
     <!-- <text class='name'>性别</text> -->
     <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
-     <input class="setting-input" bindinput="inputName" placeholder="姓名" placeholder-class='textcolor'  value='{{user.name}}'></input>
+     <input class="setting-input" bindinput="inputName" placeholder="姓名" placeholder-class='textcolor' disabled="true" value='{{user.name}}'></input>
       </view>
       <view class='setting-input-wrap'>
         <!-- <text class='picker-text'>性别:</text> -->
 
-        <picker style="display:inline-block;line-height: 90rpx;padding-left: 20rpx;" bindchange="pickerFiled" value="{{fIndex}}" range="{{fileds}}">
+        <picker style="display:inline-block;line-height: 90rpx;padding-left: 20rpx;" bindchange="pickerFiled" disabled="true" value="{{fIndex}}" range="{{fileds}}">
           <view class="field" style="padding-left:20rpx;">{{fileds[fIndex]}}</view>
         </picker>
       </view>
@@ -32,21 +32,18 @@
   <view class='setting-input-wrap'>
     <!-- <text class='name'>手机号</text> -->
     <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
-    <input class="setting-input" bindinput="inputPhone" placeholder="手机号" placeholder-class='textcolor'  value='{{user.phone}}'></input>
+    <input class="setting-input" bindinput="inputPhone" placeholder="手机号" placeholder-class='textcolor' disabled="true" value='{{user.phone}}'></input>
   </view>
 
   <view class='setting-input-wrap'>
     <!-- <text class='name'>年龄</text> -->
     <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
-    <input class="setting-input" disabled="true" placeholder="年龄" placeholder-class='textcolor' value='{{user.age}}'></input>
+    <input class="setting-input" disabled="true" placeholder="年龄" placeholder-class='textcolor' disabled="true" value='{{user.age}}'></input>
     <!-- <text class='nametext'>{{user.age}}</text> -->
   </view>
-<view class='setting-input-wrap'>
-    <!-- <text class='name'>年龄</text> -->
-    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
-    <input class="setting-input" placeholder="会籍" placeholder-class='textcolor' value='{{user.channel == 1?"教练":"扫码"}}'></input>
-    <!-- <text class='nametext'>{{user.age}}</text> -->
-  </view>
+<!-- <view class='setting-input-wrap'>
+    <input class="setting-input" disabled="true" placeholder="会籍" placeholder-class='textcolor' value='{{user.channel == 1?"教练":"扫码"}}'></input>
+  </view> -->
 
   <!--粉丝数  -->
    <view class='contract-head'>
@@ -98,7 +95,7 @@
   <button class='addbtn' bindtap='moreBody'>更多</button>
   </view>
   <block wx:for="{{bodyparams}}">
-<view wx:if="{{index < 3 }}"  style="z-index:999;" data-item="{{item}}" data-id="{{item.id}}" bindtap="gotoBody"   class='namebox'>
+<view wx:if="{{index < 3 && item.id }}"  style="z-index:999;" data-item="{{item}}" data-id="{{item.id}}" bindtap="gotoBody"   class='namebox'>
     <text class='name'>{{item.create_time}}</text>
     <image class='nameicon' src='http://doit.svte.cn/images/righticon.png'></image>
    </view>
@@ -108,7 +105,7 @@
 
 
 <view class='btn-area'>
-<button class='back' bindtap='addUser'>保存</button>
+<!-- <button class='back' bindtap='addUser'>保存</button> -->
 <button class='back'  bindtap='delUser'>删除</button>
 </view>
 </view>

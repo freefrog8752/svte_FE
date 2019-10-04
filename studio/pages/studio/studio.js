@@ -46,7 +46,7 @@ Page({
     this.setData({ 'info.name': e.detail.value })
   },
   inputPhone: function (e) {
-    this.setData({ 'info.tel': Number(e.detail.value) })
+    this.setData({ 'info.tel': e.detail.value })
   },
   inputIntro: function (e) {
     this.setData({ 'info.intro': e.detail.value })
@@ -189,7 +189,7 @@ Page({
         mask: true
       })
     let that = this;
-    
+    this.setData({ 'info.tel': Number(this.data.info.tel) })
     wx.request({
       url: app.globalData.globalUrl.getStudio + app.globalData.studioId,
       method:'put',

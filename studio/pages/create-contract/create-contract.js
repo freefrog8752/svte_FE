@@ -19,9 +19,17 @@ Page({
       amount:0,
       totalCourse:0,
       leftCourse:18,
-      expiredTime:0
+      expiredTime:'',
+      signTime:'',
+      channel:1,
+      courseId:2
     }
 
+  },
+  bindSignTimeChange:function(e){
+    this.setData({
+      'basic.signTime':e.detail.value
+    })
   },
   bindLeft: function (e) {
     this.setData({
@@ -43,7 +51,6 @@ Page({
   bindDateChange: function (e) {
     console.log(e.detail.value)
     this.setData({
-      dates: e.detail.value,
       'basic.expiredTime': e.detail.value
     })
   },
@@ -57,7 +64,7 @@ Page({
   addContract:function(){
     let that = this;
         wx.request({
-          url: app.globalData.rootUrl + 'studio/1/student/'+this.data.id+'/contracts',
+          url: app.globalData.rootUrl + 'studio/'+app.globalData.studioId+'/student/'+this.data.id+'/contracts',
           method:'post',
           data:this.data.basic,
           success:function(d){
