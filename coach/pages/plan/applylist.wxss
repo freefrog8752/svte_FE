@@ -1,0 +1,14 @@
+.list-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* margin: 30rpx 0rpx; */
+}
+.list-col{
+  font-size: 16px;
+  flex:1;
+  text-align: center;
+  color:#ffd92e;
+  height: 35px;
+}

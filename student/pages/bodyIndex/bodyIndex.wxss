@@ -1,0 +1,92 @@
+/* pages/contract/contract.wxss */
+.concract-name{
+  display: flex;
+  justify-content: space-around;
+  line-height: 30px;
+}
+.concract-name>view{
+  font-size: 14px;
+}
+.concract-name>view.hover{
+  border-bottom: 2px solid rgb(228, 31, 31);
+  color: rgb(228, 31, 31);
+  margin-bottom: -1px;
+}
+.contract-info{
+  padding: 10px 0;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(177, 172, 172, 0.5);
+  border-top: 1px solid rgba(177, 172, 172, 0.5);
+}
+.contract-info text{
+  color: rgb(228, 31, 31);
+}
+.contract-info>view{
+  padding: 0 30px;
+  line-height: 30px;
+}
+.contract-info .tiao{
+  height: 88px;
+  border-right: 1px solid rgba(177, 172, 172, 0.5);
+  padding: 0;
+}
+.left-course>view:nth-of-type(1),.left-days>view:nth-of-type(1){
+  color: rgba(112, 108, 108, 0.8);
+}
+.left-course>view:nth-of-type(2),.left-days>view:nth-of-type(2){
+  font-size: 12px;
+  color: rgb(177, 168, 168);
+}
+.proess{
+  position: relative;
+  width: 110px;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 10px;
+}
+.under{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(240,240,240);
+  height: 10px;
+  width: 100%;
+}
+.red{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgb(228, 31, 31);
+  height: 10px;
+  width: 20%;
+}
+.contract-time{
+  padding: 10px 15px;
+  line-height: 30px;
+}
+.contract-time>view{
+  font-size: 12px;
+}
+.content{
+  background-color: rgb(240,240,240);
+}
+.block1,.block2{
+  background-color: #ffffff;
+}
+.block2{
+  margin-top: 20px;
+}
+.block2>view{
+  padding: 10px;
+  line-height: 20px;
+  font-size: 12px;
+  border-bottom: 1px solid rgb(216, 210, 210);
+}
+.block2>view>view{
+  display: flex;
+  justify-content: space-between;
+}

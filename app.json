@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tc/tc"
+  ],
+  "subpackages": [
+    {
+      "root": "studio",
+      "pages": [
+        "pages/student/student",
+        "pages/coach/coach",
+        "pages/index/index",
+        "pages/student-detail/student-detail",
+        "pages/coach-detail/coach-detail",
+        "pages/create-user/create-user",
+        "pages/create-contract/create-contract",
+        "pages/body-list/body-list",
+        "pages/body-list/body-add",
+        "pages/body-list/list",
+        "pages/course/course",
+        "pages/course/course-add",
+        "pages/message/message",
+        "pages/publish/publish",
+        "pages/studio/studio",
+        "pages/publish/publish-list",
+        "pages/publish/publish-detail",
+        "pages/bill/bill",
+        "pages/auth/auth"
+      ]
+    },{
+      "root": "coach",
+      "pages": [
+        "pages/student/student",
+        "pages/index/index",
+        "pages/student-detail/student-detail",
+        "pages/create-contract/create-contract",
+        "pages/body-list/body-list",
+        "pages/body-list/body-add",
+        "pages/body-list/list",
+        "pages/course/course",
+        "pages/course/course-add",
+        "pages/message/message",
+        "pages/user-info/user-info",
+        "pages/user-info/user-setting",
+        "pages/plan/plan",
+        "pages/plan/applylist",
+        "pages/plan/actionlist",
+        "pages/board/board",
+        "pages/salary/salary",
+        "pages/plan/myplan",
+        "pages/rank/rank"
+      ]
+    },
+    {
+      "root": "student",
+      "pages": [
+        "pages/index/index",
+        "pages/contract/contract",
+        "pages/bodyIndex/bodyIndex",
+        "pages/course/course",
+        "pages/individual/individual",
+        "pages/message/message",
+        "pages/ranking/ranking",
+        "pages/traniner/traniner",
+        "pages/studio/studio",
+        "pages/student-detail/student-detail",
+        "pages/notification/notification",
+        "pages/board/board"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

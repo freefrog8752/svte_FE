@@ -1,0 +1,56 @@
+/* pages/traniner/traniner.wxss */
+page{
+  background-color: #000;
+}
+.traniner-tab,.traniner-info{
+  background-color: #000;
+  color:#fff;
+}
+.traniner-tab{
+  height: 180px;
+}
+.traniner{
+  width: 30%;
+  margin: 1.5%;
+}
+.traniner-name{
+  font-size: 14px;
+  color: #fff;
+}
+.traniner-pic{
+  text-align: center;
+}
+.scroll-content{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.scroll-content view:nth-of-type(1){
+  color: #ffd92e;
+}
+.traniner-info{
+  width: 86%;
+  padding: 0 25px;
+}
+.traniner-info view{
+  border-bottom: 1px solid rgba(126,126,126,.2);
+  padding: 5px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.traniner-info view text:nth-of-type(1){
+  font-weight: bold;
+}
+.traniner-info view text:nth-of-type(2){
+  
+}
+.traniner-pic image{
+  width: 100%;
+  max-height: 80px;
+  max-width: 100px;
+}
+.trainner-name{
+  text-align: center;
+}

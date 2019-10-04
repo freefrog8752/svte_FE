@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class='bg'>
+<view class="row"style="font-size: 30px;justify-content: start;padding: 0 30rpx;margin-bottom: 40rpx;color: #fff;">
+    SVTE 工作室
+</view>
+<view class="row">
+    <navigator wx:for="{{items}}" url="{{item.url}}">
+        <view class="item_size">
+            <image class="img" mode='scaleToFill' src="{{item.src}}"></image>
+            <text class="text">{{item.text}}</text>
+        </view>
+    </navigator>
+</view>
+</view>

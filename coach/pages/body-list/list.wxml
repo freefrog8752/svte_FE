@@ -1,0 +1,15 @@
+<!--pages/user/user.wxml-->
+<view class="setting-wrap">
+
+<!--基本信息盒模型  -->
+<view class='basic'>
+ <view class='contract-head'>
+  <text class='contract-head-text'>体参信息</text>
+  <!-- <button class='addbtn' bindtap='addBodyIndex'>添加</button> -->
+  </view>
+<view wx:for="{{bodyparams}}" style="z-index:999;" data-item="{{item}}" data-id="{{item.id}}"bindtap="gotoBody"   class='namebox'>
+    <text class='name'>{{item.create_time}}</text>
+    <image class='nameicon' src='http://doit.svte.cn/images/righticon.png'></image>
+   </view>
+</view>
+</view>

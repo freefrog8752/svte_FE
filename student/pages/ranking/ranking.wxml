@@ -1,0 +1,17 @@
+<view class="content">
+  <view class="list">
+    <view class="tab-title">
+      <view>总课时榜</view>
+      <view>积分榜</view>
+      <view>消课榜</view>
+    </view>
+    <view wx:for="{{memberList}}">
+      <view class="user">
+        <view><image src="{{item.pic}}"></image></view>
+        <view><text>{{item.name}}</text></view>
+      </view>
+      <view>{{item.score}}</view>
+      <view>{{item.reduce_course}}</view>
+    </view>
+  </view>
+</view>

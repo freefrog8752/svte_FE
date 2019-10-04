@@ -1,0 +1,18 @@
+<view>
+    <scroll-view scroll-y="true" bindscrolltolower="lower" style="height:{{windowHeight}};background-color:#000;" lower-threshold="200">
+     
+            <view class=''>
+      
+      <view style='margin:50rpx 0 0 30rpx;'>
+        <text class='biaoti'>总金额：{{totalIncomes}}</text>
+        <text class='biaoti'>月入账：上次登陆时间:{{monthTotalIncomes}}</text>
+        <text class='biaoti'>月消课：{{monthCourseExpendIncomes}}</text>
+      </view>
+<!-- <navigator url='/pages/student-detail/student-detail'> -->
+    
+    <!-- </navigator> -->
+  </view>
+      
+    </scroll-view>
+   
+</view>

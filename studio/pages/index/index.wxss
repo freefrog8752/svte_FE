@@ -1,0 +1,37 @@
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.bg{
+  background-color: #000;
+  height: 100vh;
+}
+.item_size {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300rpx;
+    background-color: rgba(44, 44, 44, .7);
+    height:240rpx;
+    margin-bottom: 20rpx;
+}
+
+.img {
+    width: 100rpx;
+    height: 100rpx;
+    margin-top: 15rpx
+}
+
+.text {
+    font-size: 18px;
+    align-content: flex-end;
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
+    color: #fff;
+}

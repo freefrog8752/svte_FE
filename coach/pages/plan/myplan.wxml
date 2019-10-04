@@ -1,0 +1,47 @@
+<view class='gw-message07-head'>
+  <view class='gw-message07-head-tt'>
+    计划详情
+  </view>
+  <!-- <view class='gw-message07-head-con'>
+    {{remark}}
+  </view> -->
+</view>
+<block wx:if="{{!showNoMessage}}">
+  <view wx:for='{{msgList}}' wx:key='{{message}}' wx:for-item="message">
+    <view class='gw-message07-item' bindtap='updateStatus' data-index='{{index}}'>
+      <view class='gw-message07-item-head'>
+        <view class='gw-message07-item-head-tt'>
+          {{message.movement_name}}
+        </view>
+        <view class='gw-message07-item-head-time'>
+          计划:{{message.count}}次/秒 {{message.group_count}} 组 {{message.rest}} 组间休息
+        </view>
+        <view wx:if="{{message.real_count!=null}}" class='gw-message07-item-head-time'>
+          实际:{{message.real_count}}次/秒 {{message.real_group_count}} 组 {{message.real_rest}} 组间休息
+        </view>
+        <view wx:else style="display:flex;flex-direction:row;" class='gw-message07-item-head-time'>
+          <view style="display:flex;flex-direction:row;flex:1;line-height:30px;justify-content:space-between;">实际:
+            <input style="width: 30rpx;text-align: right;" bindinput="realCount" value="{{message.real_count}}"></input>次/秒 </view>
+          <view style="display:flex;flex-direction:row;flex:1;line-height:30px;justify-content:center;">
+            <input style="width: 30rpx;text-align: right;" bindinput="realGroup" value="{{message.real_group_count}}"></input> 组</view>
+          <view style="display:flex;flex-direction:row;flex:1;line-height:30px;justify-content:flex-end;">
+            <input style="width: 30rpx;text-align: right;" bindinput="realRest" value="{{message.real_rest}}"></input> 组间休息</view>
+            <view style="display:flex;flex-direction:row;flex:1;line-height:30px;"><button bindtap="saveReal" style="height: 30px;line-height: 30px;font-size: 14px;" data-p="{{message}}">保存</button> </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view>
+    <!--<block wx:if="{{showOnMoreButton}}">
+<button bindtap='onLoadMore' ><b>+</b>{{OnMoreButton}}</button>
+</block>-->
+  </view>
+</block>
+<block wx:else>
+  <view class='gw-message08-item'>
+    <view class='gw-message08-item-tt'>
+      {{noMessageTitle}}
+    </view>
+  </view>
+</block>

@@ -1,0 +1,40 @@
+<view style='background:#000;'>
+<view class="category">
+    <view class="subcate" bindtap="checkCate">选择课程:{{currentCourse.name}}</view>
+     <view  class='btn-area'>
+        <button class='savesetting' bindtap='setDefault'>设置默认</button>
+      </view>
+      <!-- <view class="subcate" bindtap="checkCate" data-cate="1">私教课</view> -->
+    </view> 
+  <view class='week-header'> 
+    <view bindtap='changeDuration' data-type="0">上一周</view> 
+    <view>{{currentFirst}} - {{currentLast}}</view> 
+    <view bindtap='changeDuration' data-type="1">下一周</view> 
+  </view> 
+  <view class='week-header-sec'> 
+    <view class='week-header-cell' wx:for="{{dates}}">{{item.simple}}</view> 
+  </view> 
+  <scroll-view scroll-y="true" class='weekday-table'> 
+    <block wx:for="{{times}}" wx:key="t" wx:for-item='t'> 
+      <view class='tr'> 
+        <block wx:for="{{dates}}" wx:key="d" wx:for-item='d'> 
+          <view wx:if="{{d.simple}}" class='td' data-date="{{d}}" data-time="{{t}}" bindtap='setCourse'> 
+          <block wx:for="{{courses}}" wx:for-item='c'>
+            <view wx:if="{{t==c.time&&c.date==d.simple}}" style="font-size: 12px;" class="{{c.isRest == 1?'rest':'course'}}">
+              {{c.isRest == 1?'休息':c.course_name}}
+            </view>
+            </block>
+          </view> 
+          <view wx:else class='td' data-date="{{d}}" data-time="{{t}}"> 
+{{t}} 
+          </view> 
+        </block> 
+      </view> 
+    </block> 
+  </scroll-view>
+    <modal hidden="{{hidelist}}" title="" bindcancel="cancel" confirm-text="选择" bindconfirm="confirm"> 
+ <view wx:for="{{studiocourse}}" data-c="{{item}}" bindtap="selcourse" style="line-height:60rpx;height: 60rpx;border-bottom: 1px solid rgba(71,71,71,.2);">
+ <text class="{{selCourseId == item.id?'yellow':''}}">课程{{index+1}}:{{item.name}}</text>
+ </view>
+</modal>
+</view> 

@@ -1,0 +1,61 @@
+<view class="container">
+  <scroll-view scroll-y class="traniner-tab">
+    <view class="scroll-content">
+      <view class="traniner" wx:for="{{traninerList}}" bindtap="selectTraniner" data-info="{{item}}">
+        <view class="traniner-pic">
+          <image src="{{item.picurl}}"></image>
+        </view>
+        <view class="trainner-name">{{item.name}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="traniner-info">
+    <view>
+      <text>姓名</text>
+      <text>{{traniner.name}}</text>
+    </view>
+    <view>
+      <text>生日</text>
+      <text>{{traniner.birthdate}}</text>
+    </view>
+    <view>
+      <text>工作年限</text>
+      <text>{{traniner.work_years}}</text>
+    </view>
+    <view>
+      <text>三维</text>
+      <text>{{traniner.thoracometer}}，{{traniner.waistline}}，{{traniner.hipline}}</text>
+    </view>
+    <view>
+      <text>身高</text>
+      <text>{{traniner.height}}</text>
+    </view>
+    <view>
+      <text>体重</text>
+      <text>{{traniner.weight}}</text>
+    </view>
+    <view>
+      <text>授课时长</text>
+      <text>{{traniner.course_time==null?'':traniner.course_time}}</text>
+    </view>
+    <view>
+      <text>课程种类</text>
+      <text>{{courseType}}</text>
+    </view>
+    <view>
+      <text>执照证书</text>
+      <text>{{traniner.certificate}}</text>
+    </view>
+    <view>
+      <text>擅长领域</text>
+      <text>{{traniner.goodat}}</text>
+    </view>
+    <view>
+    <block wx:for="{{photos}}">
+    <image src="{{item}}" style="width:60px;height:60px;">
+
+    </image>
+    </block>
+    </view>
+  </view>
+</view>

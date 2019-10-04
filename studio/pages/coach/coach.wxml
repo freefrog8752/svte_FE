@@ -1,0 +1,18 @@
+<view>
+    <scroll-view scroll-y="true" bindscrolltolower="lower" style="height:{{windowHeight}};background-color:#000;" lower-threshold="200">
+        <block wx:for="{{arr_res}}">
+            <view class='project' bindtap="gotoDetail" data-item="{{item}}">
+      <image class='headimage' src='http://img.zcool.cn/community/01ca005b02587ba801218cf4fe698a.gif'></image>
+      <view class='projecttext'>
+        <text class='biaoti'>{{item.name}}</text>
+        <text class='jianjie'>生日:{{item.birthdate}}</text>
+        <text class='field'>电话:{{item.phone==null?'':item.phone}}</text>
+      </view>
+<!-- <navigator url='/pages/student-detail/student-detail'> -->
+      <view class='openpush'></view>
+    <!-- </navigator> -->
+  </view>
+        </block>
+    </scroll-view>
+    <loading hidden="{{loadingHidden}}">{{lodingInfo}}</loading>
+</view>

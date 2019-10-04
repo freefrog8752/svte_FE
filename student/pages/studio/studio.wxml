@@ -1,0 +1,77 @@
+<!--pages/user/user.wxml-->
+<!--基本信息盒模型  -->
+<view class="setting-wrap">
+<view class='basic' >
+  <text class='setting-title'>基本信息</text>
+ <!--名字部分  -->
+  <view class='setting-input-wrap'>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <input placeholder-class='textcolor' placeholder="名字" disabled="true" value='名字：{{info.name}}'  class='setting-input'></input>
+  </view>
+
+  <!--名字部分  -->
+  <view class='setting-input-wrap'>
+    <!-- <text class='name'>地址</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->        <input placeholder-class='textcolor' placeholder="地址"   disabled="true" value='地址：{{info.address}}'  class='setting-input'></input>
+
+  </view>
+
+  <!--手机号部分  -->
+  <view class='setting-input-wrap'>
+    
+    <input placeholder-class='textcolor' placeholder="地址"   disabled="true" value='开业时间：{{info.start_time}}'  class='setting-input'></input>
+
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+
+  </view>
+
+ 
+  <view class='setting-input-wrap'>
+  <input placeholder-class='textcolor' disabled="true" value='营业时间 从{{info.open_time}} 至 {{info.close_time}}'  class='setting-input'></input>   
+  </view>
+    <view class='setting-input-wrap'>
+    <!-- <text class='name'>电话</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <input placeholder-class='textcolor'  placeholder="电话"  class='setting-input' disabled="true" value='电话：{{info.tel}}'  type='number'></input>
+  </view>
+    <view class='setting-input-wrap'>
+    <!-- <text class='name'>简介</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <input placeholder-class='textcolor'  placeholder="简介"  class='setting-input' disabled="true" value='{{info.intro}}'  type='number'></input>
+  </view>
+      <view class='basic'>
+     <view class='setting-title'>照片</view>
+  </view>
+   <view class="question-images-area">
+    <!-- 图片缩略图  -->
+    <view class="question-images">
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{path}}{{item.path}}" mode="aspectFill" data-type="1" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+        </view>
+      </block>
+    </view>
+
+  </view>
+      <view class='basic'>
+        <view class='setting-title'>营业执照</view>
+ <view class='contract-head'>
+        </view>
+  </view>
+    <view class="question-images-area">
+    <!-- 图片缩略图  -->
+    <view class="question-images">
+      <block wx:for="{{licImg}}" wx:key="{{item.id}}">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{path}}{{item.path}}" mode="aspectFill" data-type="2" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+        </view>
+      </block>
+    </view>
+
+  </view>
+</view> 
+<view class='btn-area'>
+
+<button class='back' bindtap='join'>申请加入</button>
+</view>
+</view>

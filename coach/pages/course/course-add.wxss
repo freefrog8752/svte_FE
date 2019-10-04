@@ -1,0 +1,56 @@
+/* coach/pages/course/course-add.wxss */
+page{
+  background-color: #000;
+}
+.course-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+}
+.course-header-child{
+  padding:0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.selected-tab{
+  color:#ffd92e;
+}
+.date-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.course-header-cell{
+  flex:1;
+  display: flex;
+  height: 120rpx;
+  justify-content: center;
+  align-items: center;
+  
+}
+.course-header-sec{
+  border-top:1rpx solid #c1c1c1;
+  height: 120rpx;
+  background: #fff;
+  line-height: 120rpx;
+  padding-left: 20rpx;
+  display: flex;
+  text-align: center;
+}
+.course-header-sec view{
+  flex:1;
+}
+.btn {
+  width: 308rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  background-color: #ffd92e!important;
+  font-family: NotoSansCJKsc-Bold;
+  font-size: 26rpx;
+  color: #fff;
+  letter-spacing: 0;
+  /* float: left; */
+}

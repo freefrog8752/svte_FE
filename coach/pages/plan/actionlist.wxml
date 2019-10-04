@@ -1,0 +1,7 @@
+<view style="background-color:#000;height:100vh;padding:30rpx 50rpx;">
+<view class="list-row" bindtap="showMenu" data-idx="{{index}}" data-item="{{item}}" wx:for="{{selActs}}">
+  <view class="list-col">{{index+1}}.{{item.name}}</view>
+  <view class="list-col">{{item.tag}}</view>
+</view>
+<view style="margin-top:20rpx;margin-bottom:20rpx;"><button style="width: 20%;background-color: #ffc300;color: #fff;height: 30px;line-height: 30px;" bindtap="saveActs">提交</button></view>
+</view>

@@ -1,0 +1,17 @@
+<view style='background-color:#000;'>
+<!-- <view class='btn-area'><navigator class='back' url="../create-user/create-user?type=0">添加学员</navigator></view> -->
+    <scroll-view scroll-y="true" bindscrolltolower="lower" style="height:{{windowHeight}};" lower-threshold="200">
+        <navigator wx:for="{{list}}" url="publish-detail?id={{item.id}}&title={{item.title}}&content={{item.content}}">
+            <view class='msg-wrap'>
+              <view class='msg-content'><text>{{item.content}}</text>
+              </view>
+              
+            </view>
+        </navigator>
+    </scroll-view>
+     <view class='complete'>
+    <view  class='btn' bindtap="addMsg">添加图文</view>
+    
+  </view>
+    <!-- <loading hidden="{{loadingHidden}}">{{lodingInfo}}</loading> -->
+</view>

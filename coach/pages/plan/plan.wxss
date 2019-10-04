@@ -1,0 +1,39 @@
+/* coach/pages/plan/plan.wxss */
+.filter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 40rpx; */
+  flex-wrap: wrap;
+  border: 1px solid #fff;
+  border-collapse:  collapse;
+}
+.movs{
+  width: 20%;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  color:#fff;
+}
+.sel{
+  background-color: #ffd92e;
+}
+.result-box{
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+flex-wrap: wrap;
+border: 1px solid #fff;
+border-collapse: collapse;
+min-height: 300rpx;
+}
+.acts{
+  width: 20%;
+text-align: center;
+height: 100rpx;
+/* line-height: 0rpx; */
+color: #fff;
+display: inline-block;
+}

@@ -1,0 +1,113 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper class="banner" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="10" next-margin="10" circular="true">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="my-course">
+    <navigator url="../course/course"><view class="my-course-title">
+      <text>我的课程</text>
+    </view></navigator>
+    <scroll-view scroll-y class="my-course-panel">
+      <view class="my-course-panel-box">
+        <view wx:if="{{isEmptyCourseList}}" class="empty-course-box">
+          <view>
+            <navigator url="../../pages/course/course">+</navigator>
+          </view>
+          <text class="course-info">制定学习计划，提高学习效率</text>
+        </view>
+        <view wx:if="{{!isEmptyCourseList}}" class="course-box">
+          <block wx:for="{{courseList}}">
+            <view class="course-item">
+              <text class="course-item-name">{{item.course_name}}</text>
+              <text class="course-item-time">{{item.apply_time}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="navi-bar">
+    <view class="navi-bar-item" bindtap="signin">
+      <navigator class="navi-bar-item-a"  url="#">
+      <image style="width:40px;height:40px;margin-top:10px;" src="https://doit.svte.cn/images/12.png"></image>
+      </navigator>
+      <text>打卡</text>
+    </view>
+    <view class="navi-bar-item">
+      <navigator class="navi-bar-item-a" url="../../pages/traniner/traniner">
+      <image style="width:40px;height:40px;margin-top:10px;" src="https://doit.svte.cn/images/9.png"></image>
+      </navigator>
+      <text>教练风采</text>
+    </view>
+    <view class="navi-bar-item">
+      <navigator class="navi-bar-item-a" url="../../pages/ranking/ranking">
+      <image style="width:40px;height:40px;margin-top:10px;" src="https://doit.svte.cn/images/11.png"></image>
+      </navigator>
+      <text>排行榜</text>
+    </view>
+    <view class="navi-bar-item">
+      <navigator class="navi-bar-item-a" url="../studio/studio">
+      <image style="width:40px;height:40px;margin-top:10px;" src="https://doit.svte.cn/images/10.png"></image>
+      </navigator>
+      <text>健身中心</text>
+    </view>
+  </view>
+  <view class="notification">
+    <view class="notification-title">
+      <text>健身中心通知</text>
+      <text bindtap="gotoNoti">更多>></text>
+    </view>
+    <view class="notification-panel">
+      <block wx:for="{{notificationList}}">
+        <view class="notification-item" wx:if="{{index<3}}">
+          <view class="notification-item-info">{{index+1}}.{{item.title}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+       <view class="my-course">
+    <navigator url="../board/board"><view class="my-course-title">
+      <text>留言板</text>
+      
+    </view></navigator>
+    </view>
+  <!-- <view class="message-board">
+    <view class="message-board-title">
+      <text>留言板</text>
+    </view>
+  </view> -->
+  <!-- <view class="tabbar">
+    <view class="tabbtn"></view>
+    <view class="tabbtn"></view>
+    <view class="tabbtn"></view>
+    <view class="tabbtn"></view>
+    <view class="tabbtn"></view>
+  </view> -->
+  <view class="navi-bar" style="margin:0;border-radius:0;width:100%;">
+    <view class="navi-bar-item">
+      <navigator class="navi-bar-item-b"  url="../course/course">
+        <text>课程</text>
+      </navigator>
+    </view>
+    <view class="navi-bar-item">
+      <navigator class="navi-bar-item-b" url="../traniner/traniner">
+        <text>教练</text>
+      </navigator>
+    </view>
+    <view class="navi-bar-item">
+      <navigator class="navi-bar-item-b" url="../message/message">
+        <text>消息</text>
+      </navigator>
+    </view>
+    <view class="navi-bar-item">
+      <navigator class="navi-bar-item-b" url="../individual/individual?id={{id}}">
+        <text>个人中心</text>
+      </navigator>
+    </view>
+  </view>
+</view>

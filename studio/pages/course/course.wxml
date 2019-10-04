@@ -1,0 +1,35 @@
+
+<view class="search">
+  <block>
+    <view>
+      <view class='cat-wrap'>
+        <!-- <view class='left-line'></view>
+        <view class='cat-title'>
+          tttttttt
+          <view class="cat-expand-wrap">
+          <!--展开-->
+            <!-- <image hidden="{{!category.isExpand}}" src='../../images/icon_collapse.png' />  
+            <image hidden="{{category.isExpand}}" src='../../images/icon_expand.png' /> -->
+          <!-- </view>
+        </view>  -->
+        <view class='cat-box'>
+          <!-- <block >
+            <view class='cat-item'>aaaaaaaaaaaa</view>
+          </block> -->
+           <block wx:for="{{courseList}}" wx:key='index' wx:for-item="course">
+            <view class='cat-item {{selid==course.id?"seltxt":""}}'  data-id='{{course.id}}' bindtap='linkDetail'>{{course.name}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+   <modal hidden="{{hidelist}}" title="" bindcancel="cancel" confirm-text="选择" bindconfirm="confirm"> 
+ <view wx:for="{{coachList}}" data-c="{{item}}" bindtap="selcoach" style="line-height:60rpx;height: 60rpx;border-bottom: 1px solid rgba(71,71,71,.2);">
+ <text class="{{currentCoach.id == item.id?'yellow':''}}">教练{{index+1}}:{{item.name}}</text>
+ </view>
+</modal>
+  <view class='complete'>
+    <view  class='btn' style="margin-right:10rpx;" bindtap="gotoAdd">添加课程</view>
+    <view style="margin-left:10rpx;" bindtap="rmcourse" class='btn fr'>删除课程</view>
+  </view>
+</view>

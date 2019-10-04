@@ -1,0 +1,43 @@
+<!--coach/pages/course/course.wxml-->
+<view style='background:#000;'>
+  <view class='course-header'>
+    <view class='course-header-child {{setType==0?"selected-tab":""}}' bindtap='setCourse' data-type="0">排课</view>
+    <view class='course-header-child {{setType==1?"selected-tab":""}}' bindtap='setCourse' data-type="1">休息</view>
+  </view>
+  <view class='date-area'>
+    <view class='course-header-cell' style='border-right:1rpx solid #c1c1c1;'>{{date.fulldate}}</view>
+    <view class='course-header-cell'>{{time}}</view>
+  </view>
+ <view class='course-header-sec' wx:if="{{setType==0}}">
+    <view>选择课程</view>
+    <view>
+    <picker style='height:120rpx;' bindchange="pickerFiled" value="{{fIndex}}" range="{{courses}}" range-key="name">
+      <view class="field">{{courses[fIndex].name}}</view>
+    </picker>
+    </view>
+    <view>
+      <text>是否团体</text>
+      <view style="display: inline-block;padding-left: 10px;">
+    <checkbox-group bindchange="isSingleChange">
+  <label class="checkbox">
+    <checkbox value="{{isSingle}}"/>
+  </label>
+</checkbox-group>
+    </view>
+    </view>
+  </view>
+  <view class='course-header-sec' wx:else>
+    <view>设置休息</view>
+    <view >
+    <checkbox-group bindchange="checkboxChange">
+  <label class="checkbox">
+    <checkbox value="{{isRest}}"/>
+  </label>
+</checkbox-group>
+    </view>
+  </view>
+ <view class='complete'>
+    <view  class='btn' bindtap="addCourse">添加课程</view>
+    <!-- <view class='btn fr'>删除课程</view> -->
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<!--pages/user/user.wxml-->
+<view class='basic'>
+  <view class='namebox'>
+  <text class='name'>签约时间</text>
+    
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    
+    <picker mode="date" value="{{dates}}" start="2019-01-01" end="2020-09-01">
+    <view class="field">
+      当前选择: {{dates}}
+    </view>
+  </picker>
+  </view>
+
+  <!--擅长领域  -->
+  <view class='namebox'>
+    <text class='name'>订课数量</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+   
+    <input placeholder-class='textcolor' bindinput='bindTotal' class='nametext' type='number'></input>
+
+  </view>
+  
+  <view class='namebox'>
+    <text class='name'>订课金额</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+   
+    <input placeholder-class='textcolor' bindinput='bindAoumt' class='nametext' type='number'></input>
+
+  </view>
+  <!--微博状态  -->
+  <view class='namebox'>
+    <text class='name'>已消课程</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+<input placeholder-class='textcolor' class='nametext' type='number'></input>
+  </view>
+  <view class='namebox'>
+    <text class='name'>剩余课时</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> --><input placeholder-class='textcolor' class='nametext' bindinput='bindLeft' type='number'></input>
+  </view>
+  <view class='namebox'>
+    <text class='name'>到期时间</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+   <picker mode="date" value="{{dates}}" start="2019-01-01" end="2020-09-01" bindchange="bindDateChange">
+    <view class="field">
+      当前选择: {{dates}}
+    </view>
+  </picker>
+</view> 
+</view>
+<view class='btn-area'>
+<!-- <button class='back' open-type="navigateBack">保存</button> -->
+<button class='back' bindtap='addContract'>保存</button>
+</view>

@@ -1,0 +1,8 @@
+/* pages/tc/tc.wxss */
+.text{
+  color:#fff;
+  padding: 0 20rpx;
+}
+page{
+  background-color: #000;
+}

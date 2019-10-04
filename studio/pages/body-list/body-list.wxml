@@ -1,0 +1,91 @@
+<!--pages/user/user.wxml-->
+<!--基本信息盒模型  -->
+<view class='basic'>
+  <text class='basictext'>体参信息</text>
+
+  <!--名字部分  -->
+  <view class='namebox'>
+    <text class='name'>体重</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.weight}}</text>
+  </view>
+
+  <!--手机号部分  -->
+  <view class='namebox'>
+    <text class='name'>体脂率</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.body_fat}}</text>
+  </view>
+
+  <!--微博昵称  -->
+  <view class='namebox'>
+    <text class='name'>身体水分含量</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.shentishuifenhanliang}}</text>
+  </view>
+  <!--粉丝数  -->
+  <view class='namebox'>
+    <text class='name'>骨骼肌</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.gugeji}}</text>
+  </view>
+  <view class='namebox'>
+    <text class='name'>基础代谢</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.jichudaixie}}</text>
+
+
+  </view>
+  <view class='namebox'>
+    <text class='name'>身体年龄</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.shentinianling}}</text>
+  </view>
+
+  <!--手机号部分  -->
+  <view class='namebox'>
+    <text class='name'>胸围</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.xiongwei}}</text>
+  </view>
+
+  <!--微博昵称  -->
+  <view class='namebox'>
+    <text class='name'>左臂围</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.zuobiwei}}</text>
+  </view>
+  <!--粉丝数  -->
+  <view class='namebox'>
+    <text class='name'>右臂围</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.youbiwei}}</text>
+  </view>
+  <view class='namebox'>
+    <text class='name'>腰围</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.yaowei}}</text>
+
+
+  </view>
+  <view class='namebox'>
+    <text class='name'>左大腿围</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.zuodatuiwei}}</text>
+  </view>
+    <view class='namebox'>
+    <text class='name'>右大腿围</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.youdatuiwei}}</text>
+  </view>
+    <view class='namebox'>
+    <text class='name'>左小腿围</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.zuoxiaotuiwei}}</text>
+  </view>
+    <view class='namebox'>
+    <text class='name'>右小腿围</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <text class='nametext'>{{user.youxiaotuiwei}}</text>
+  </view>
+</view>

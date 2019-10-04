@@ -1,0 +1,32 @@
+<view class="content">
+  <view class="block1">
+    <view class="concract-name">
+      <view wx:for="{{contractList}}" data-index="{{index}}" bindtap="addHover" class="{{isHover === index ?'hover':''}}">
+        合约{{index+1}}
+      </view>
+    </view>
+    <view class="contract-info">
+      <view class="left-course">
+        <view>剩余堂数</view>
+        <view>剩余<text >{{contractList[currentContract].left_course}}</text>堂，<text>{{contractList[currentContract].total_course}}</text>共堂</view>
+        <view class="proess">
+          <view class="under"></view>
+          <view class="red"></view>
+        </view>
+      </view>
+      <view class="tiao"></view>
+      <view class="left-days">
+        <view>剩余天数</view>
+        <view>剩余<text >{{contractList[currentContract].leftCourse}}</text>天，<text>共{{contractList[currentContract].totalCourse}}</text>天</view>
+        <view class="proess">
+          <view class="under"></view>
+          <view class="red"></view>
+        </view>
+      </view>
+    </view>
+    <view class="contract-time">
+      <view>{{contractList[currentContract].course_name}}-{{contractList[currentContract].sign_time}}</view>
+      <view>金额:{{contractList[currentContract].amount}}</view>
+    </view>
+  </view>
+</view>

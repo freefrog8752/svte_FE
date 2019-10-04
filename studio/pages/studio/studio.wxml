@@ -1,0 +1,101 @@
+<!--pages/user/user.wxml-->
+<!--基本信息盒模型  -->
+<view class="setting-wrap">
+<view class='basic'>
+  <text class='setting-title'>基本信息</text>
+ <!--名字部分  -->
+  <view class='setting-input-wrap'>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <input placeholder-class='textcolor' placeholder="名字" bindinput='inputName' value='{{info.name}}'  class='setting-input'></input>
+  </view>
+
+  <!--名字部分  -->
+  <view class='setting-input-wrap'>
+    <!-- <text class='name'>地址</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->        <input placeholder-class='textcolor' placeholder="地址"   bindinput='inputAddr' value='{{info.address}}'  class='setting-input'></input>
+
+  </view>
+
+  <!--手机号部分  -->
+  <view class='setting-input-wrap'>
+    <text class='name'>开业时间</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+      <picker mode="date" value="{{info.startTime}}"  placeholder="开业时间"  start="2019-01-01" end="2020-09-01" bindchange="bindDateChange">
+    <view class="field">
+      当前选择: {{info.startTime}}
+    </view>
+  </picker>
+  </view>
+
+ 
+  <view class='setting-input-wrap'>
+    <text class='name'>营业时间</text>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->  <picker mode="time"  placeholder="营业时间"  value="{{info.closeTime}}"  bindchange="bindToTimeChange">
+    <view class="field">
+      至 {{info.closeTime}}
+    </view>
+  </picker>
+       <picker mode="time" value="{{info.openTime}}" bindchange="bindFromTimeChange">
+    <view class="field">
+      从 {{info.openTime}}
+    </view>
+  </picker>
+   
+  </view>
+    <view class='setting-input-wrap'>
+    <!-- <text class='name'>电话</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <input placeholder-class='textcolor' bindinput='inputPhone' placeholder="电话"  class='setting-input' value='{{info.tel}}'  type='number'></input>
+  </view>
+    <view class='setting-input-wrap'>
+    <!-- <text class='name'>简介</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <input placeholder-class='textcolor'  bindinput='inputIntro' placeholder="简介"  class='setting-input' value='{{info.intro}}'></input>
+  </view>
+      <view class='basic'>
+     <view class='setting-title'>上传照片</view>
+ <view class='contract-head'>
+          <view>
+            <button class='addbtn' style="width: 200rpx;height: 200rpx;line-height: 200rpx;" data-type="1" bindtap="chooseImage">添加图片</button>
+          </view>
+        </view>
+  </view>
+   <view class="question-images-area">
+    <!-- 图片缩略图  -->
+    <view class="question-images">
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{path}}{{item.path}}" mode="aspectFill" data-type="1" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-type="1" data-id="{{item.id}}" data-idx="{{index}}" bindtap="removeImage">删除</view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+      <view class='basic'>
+        <view class='setting-title'>上传营业执照</view>
+ <view class='contract-head'>
+          <view>
+            <button class='addbtn' style="width: 200rpx;height: 200rpx;line-height: 200rpx;" data-type="2" bindtap="chooseImage">添加图片</button>
+          </view>
+        </view>
+  </view>
+    <view class="question-images-area">
+    <!-- 图片缩略图  -->
+    <view class="question-images">
+      <block wx:for="{{licImg}}" wx:key="{{item.id}}">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{path}}{{item.path}}" mode="aspectFill" data-type="2" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-id="{{item.id}}" data-idx="{{index}}" data-type="2" bindtap="removeImage">删除</view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+</view> 
+
+<view class='btn-area'>
+
+<button class='back' bindtap='submitForm'>保存</button>
+</view>
+</view>

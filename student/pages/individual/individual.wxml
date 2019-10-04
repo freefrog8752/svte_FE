@@ -1,0 +1,51 @@
+<view class="contanier">
+  <view class="block1">
+    <view>
+      <image src="{{path}}{{user.photo}}"></image>
+    </view>
+    <view>
+      <view>{{user.name}}</view>
+      <view>已上课{{contractList[0].total_course - contractList[0].left_course}}节</view>
+      <view>剩余课时{{contractList[0].left_course}}节</view>
+    </view>
+    <view>
+      <!-- <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"></image> -->
+      <!-- <ch-canvas canvasId='radar' id='radar'></ch-canvas> -->
+    </view>
+  </view>
+  <view class="block2">
+    <view>
+      <navigator url="../../pages/contract/contract">
+      <image style="width:20px;height:20px;margin-top:15px;" src="https://doit.svte.cn/images/15.png"></image>
+      </navigator>
+      <view>我的合约</view>
+    </view>
+    <view>
+      <navigator url="../../pages/bodyIndex/bodyIndex">
+      <image style="width:20px;height:20px;margin-top:15px;" src="https://doit.svte.cn/images/14.png"></image>
+      </navigator>
+      <view>身体参数</view>
+    </view>
+    <!-- <view>
+      <navigator src="#"></navigator>
+      <view>我的奖章</view>
+    </view> -->
+  </view>
+  <view class="block3">
+    <view>
+      <navigator url="../student-detail/student-detail?id={{user.student_id}}">设置</navigator>
+    </view>
+    <!-- <view>
+      <navigator url="#">我的订单</navigator>
+    </view> -->
+    <view>
+      <navigator url="#">我的积分: {{user.score}}</navigator>
+    </view>
+    <view>
+      <navigator url="#">会籍:   {{contractList[0].channel==1?'扫码':'教练推荐'}}</navigator>
+    </view>
+    <view>
+      <navigator url="#">关于DO IT</navigator>
+    </view>
+  </view>
+</view>

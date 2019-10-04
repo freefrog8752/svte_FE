@@ -1,0 +1,60 @@
+<!--coach/pages/plan/plan.wxml-->
+<view style="padding:50rpx;height:100vh;background-color:#000;">
+<view class="filter filter1">
+  <block wx:for="{{filter1}}">
+    <view bindtap="getSel1" data-item="{{item}}" class="movs {{sel1Arr[item]?'sel':''}}">{{item}}</view>
+  </block>
+</view>
+<view class="filter filter2">
+ <block wx:for="{{filter2}}">
+    <view bindtap="getSel2" data-item="{{item}}" class="movs {{sel2Arr[item]?'sel':''}}">{{item}}</view>
+  </block>
+</view>
+<view class="filter filter3" >
+ <block wx:for="{{filter3}}">
+    <view bindtap="getSel3" data-item="{{item}}"  class="movs {{sel3Arr[item]?'sel':''}}">{{item}}</view>
+  </block>
+</view>
+<view class="filter filter4" >
+ <block wx:for="{{filter4}}">
+    <view  bindtap="getSel4" data-item="{{item}}" class="movs {{sel4Arr[item]?'sel':''}}">{{item}}</view>
+  </block>
+</view>
+<view class="filter filter5" >
+ <block wx:for="{{filter5}}">
+    <view bindtap="getSel5" data-item="{{item}}" class="movs {{sel5Arr[item]?'sel':''}}">{{item}}</view>
+  </block>
+</view>
+<view style="margin-top:20rpx;margin-bottom:20rpx;"><button wx:if="{{sel1.length>0||sel2.length>0||sel3.length>0||sel4.length>0||sel5.length>0}}" style="width: 20%;background-color: #ffc300;color: #fff;height: 30px;line-height: 30px;" bindtap="getMovs">确定</button></view>
+
+<view wx:if="{{actions.length>0}}" class="result-box">
+<scroll-view scroll-y="true" style="height:300rpx;">
+ <block wx:for="{{actions}}">
+    <view bindtap="showCountModal" data-item="{{item}}" class="acts">{{item.name}}</view>
+  </block>
+  <view style="margin-top:20rpx;margin-bottom:20rpx;"><button wx:if="{{selAct}}" style="width: 20%;background-color: #ffc300;color: #fff;height: 30px;line-height: 30px;" bindtap="setActs">保存</button></view>
+  </scroll-view>
+</view>
+<view style="color:#fff;">
+<text>已选：</text>
+<text style="display:inline-block;" wx:for="{{selActs}}">
+{{item.name}} | 
+</text>
+</view>
+<modal hidden="{{hiddenmodalput}}" title="设置" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm"> 
+<view>
+ <slider bindchange="slidecount" min="5" max="100" show-value/><text>次/秒</text>
+ </view>
+<view>
+ <slider bindchange="slidegroup" min="5" max="20" show-value/><text>组</text>
+ </view>
+ <view>
+ <text>组间休息</text><slider bindchange="slidebreak" min="30" max="600" show-value/><text>秒</text>
+ </view>
+</modal>
+<!-- <modal hidden="{{hideActsList}}" title="动作列表" confirm-text="提交" cancel-text="取消" bindcancel="cancelList" bindconfirm="confirmList">
+<view wx:for="{{selActs}}">
+  {{(index+1)+'.'+item.name}}
+</view>
+ </modal> -->
+</view>

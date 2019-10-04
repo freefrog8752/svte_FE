@@ -1,0 +1,18 @@
+
+<view class="search">
+  <block>
+    <view>
+      <view class='cat-wrap'>
+        <view class='cat-box'>
+          <block >
+            <view class='cat-item'><input bindinput="courseName"></input></view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class='complete'>
+    <view  class='btn' bindtap="addCourse">添加课程</view>
+    <!-- <view class='btn fr'>删除课程</view> -->
+  </view>
+</view>

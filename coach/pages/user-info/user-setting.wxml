@@ -1,0 +1,137 @@
+<!--coach/pages/user-info/user-setting.wxml-->
+<view class="setting-bg">
+  <view class="setting-wrap">
+    <view class='basic' wx:if="{{type == 1}}">
+      <view class='setting-title'>数据统计</view>
+
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="工作年限" placeholder-class='textcolor' bindinput='inputWorkYear' value='{{coach.work_years}}'></input>
+
+      </view>
+      <view class='setting-input-wrap'>
+        <input placeholder-class='textcolor' placeholder="上课时长" bindinput='inputCourseTime' value='{{coach.course_time}}' class='setting-input'></input>
+      </view>
+    </view>
+
+    <view class='basic' wx:if="{{type == 2}}">
+      <view class='setting-title'>课程种类</view>
+
+      <view class='setting-input-wrap'>
+        <text class='picker-text'>选择课程</text>
+
+        <picker style="display:inline-block" bindchange="pickerCourse" value="{{cIndex}}" range="{{courses}}">
+          <view class="field" style="padding-left:20rpx;">{{selCourse?selCourse:'请选择'}}</view>
+        </picker>
+      </view>
+      <view class='setting-input-wrap'>
+        <text class='picker-text'>已选课程</text>
+
+        <view style="display: inline-block;margin-left: 20rpx;">{{coursesList}}</view>
+      </view>
+    </view>
+
+    <view class='basic' wx:if="{{type == 3}}">
+      <view class='setting-title'>个人设置</view>
+
+      <!--名字部分  -->
+     <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>性别:</text> -->
+
+        <picker style="display:inline-block;line-height: 90rpx;padding-left: 20rpx;" bindchange="pickerFiled" value="{{fIndex}}" range="{{fileds}}">
+          <view class="field" style="padding-left:20rpx;">{{fileds[fIndex]}}</view>
+        </picker>
+      </view>
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="身高" placeholder-class='textcolor' bindinput='inputHei' value='{{coach.height}}'></input>
+
+      </view>
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="体重" placeholder-class='textcolor' bindinput='inputWei' value='{{coach.weight}}'></input>
+
+      </view>
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="胸围" placeholder-class='textcolor' bindinput='inputThor' value='{{coach.thoracometer}}'></input>
+
+      </view>
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="腰围" placeholder-class='textcolor' bindinput='inputWaistline' value='{{coach.waistline}}'></input>
+
+      </view>
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="臀围" placeholder-class='textcolor' bindinput='inputHipline' value='{{coach.hipline}}'></input>
+
+      </view>
+</view>
+      <view class='basic' wx:if="{{type == 4}}">
+        <view class='setting-title'>上传照片</view>
+
+        <!--名字部分  -->
+        <view class='contract-head'>
+          <view>
+            <button class='addbtn' style="width: 200rpx;height: 200rpx;line-height: 200rpx;" bindtap="chooseImage">添加图片</button>
+          </view>
+        </view>
+        <view class="question-images-area">
+          <!-- 图片缩略图  -->
+          <view class="question-images">
+            <block wx:for="{{images}}" wx:key="{{item.id}}">
+              <view class="q-image-wrap">
+                <image class="q-image" src="{{path}}{{item.path}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+                <view class="q-image-remover" data-id="{{item.id}}" data-idx="{{index}}"  bindtap="removeImage">删除</view>
+              </view>
+            </block>
+          </view>
+
+        </view>
+      </view>
+  
+
+    <view class='basic' wx:if="{{type == 5}}">
+      <view class='setting-title'>个人擅长</view>
+
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="填写擅长" placeholder-class='textcolor' bindinput='inputGoodat' value='{{coach.goodat}}'></input>
+
+      </view>
+    </view>
+
+    <view class='basic' wx:if="{{type == 6}}">
+      <view class='setting-title'>职照证书</view>
+
+      <!--名字部分  -->
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="证书" placeholder-class='textcolor' bindinput='inputCertificate' value='{{coach.certificate}}'></input>
+
+      </view>
+    </view>
+
+    <view class='basic' wx:if="{{type == 7}}">
+      <view class='setting-title'>职业信息</view>
+
+      <!--名字部分  -->
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="毕业院校" placeholder-class='textcolor' bindinput='inputSch' value='{{coach.schools}}'></input>
+
+      </view>
+      <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>工作年限</text> -->
+        <input class="setting-input" placeholder="工作履历" placeholder-class='textcolor' bindinput='inputName' value='{{coach.workYears}}'></input>
+
+      </view>
+
+  </view>
+
+      <view class='btn-area'>
+        <button class='savesetting' bindtap='gotoEdit'>保存</button>
+      </view>
+  </view>
+  </view>

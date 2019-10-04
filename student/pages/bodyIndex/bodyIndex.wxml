@@ -1,0 +1,27 @@
+<view class="content">
+ <view class="block2">
+    <view wx:for="{{bodyIndexList}}">
+      <view>
+        <view>更新时间:{{item.create_time}}</view>
+      </view>
+      <view>
+      <view>体重:{{item.weight}}</view>
+      <view>体脂率:{{item.body_fat}}</view>
+      <view>身体水分含量:{{item.shentishuifenhanliang}}</view>
+      <view>骨骼肌:{{item.gugeji}}</view>
+      </view>
+       <view>
+       <view>基础代谢:{{item.jichudaixie}}</view>
+        <view>身体年龄:{{item.shentinianling}}</view>
+        <view>胸围:{{item.xiongwei}}</view>
+         <view>臂围（左、右）:{{item.zuobiwei}}  {{item.youbiwei}}</view>
+      </view>
+      <view>
+       <view>腰围:{{item.yaowei}}</view>
+        <view>大腿围（左、右）:{{item.zuodatuiwei}} {{item.youdatuiwei}}</view>
+        <view>小腿围（左、右）:{{item.zuoxiaotuiwei}} {{item.youxiaotuiwei}}</view>
+         <!-- <view>PBF:{{item.pbf}}</view> -->
+      </view>
+    </view>
+  </view>
+</view>

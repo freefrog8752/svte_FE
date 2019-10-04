@@ -1,0 +1,59 @@
+page {
+  background-color: #000;
+  border-top: 0 none;
+}
+.textcolor{
+  color:rgba(255,217,46,.5);
+}
+.setting-input-wrap{
+  height: 90rpx;
+  width: 100%;
+  background-color:rgba(255,255,255,.1);
+  color:#ffd92e;
+  margin: 40rpx 0;
+}
+.setting-input{
+  line-height: 90rpx;
+  height: 90rpx;
+  padding-left: 40rpx;
+}
+.addbtn{
+  font-size: 30rpx;
+  color: #ffd92e;
+  
+  text-align: center;
+  line-height: 70rpx;
+  width: 150rpx;
+  height: 70rpx;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3rpx solid #ffd92e;
+  border-radius: 25rpx;
+}
+.back {
+  font-size: 30rpx;
+  color: #ffd92e;
+  display: block;
+  text-align: center;
+  line-height: 70rpx;
+  width: 160rpx;
+  height: 70rpx;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3rpx solid #ffd92e;
+  border-radius: 25rpx;
+  /* position: absolute; */
+  /* left: 50%; */
+  /* margin-left: -65rpx; */
+  /* bottom: 70rpx; */
+}
+.basic {
+  padding-left: 20px;
+  display: block;
+  padding-right: 40rpx;
+  /* width: 100%; */
+  /* margin-top: 70rpx; */
+}
+.btn-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

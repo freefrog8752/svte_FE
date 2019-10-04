@@ -1,0 +1,15 @@
+<view style="background-color:#000;height:100vh;padding:30rpx 50rpx;">
+<view class="list-row">
+  <view class="list-col">申请日期</view>
+  <view class="list-col">学员姓名</view>
+  <view class="list-col">课程类别</view>
+</view>
+<view class="list-row" bindtap="showMenu" data-item="{{item}}" wx:for="{{applyArr}}">
+  <view class="list-col">{{item.applyFormat}}</view>
+  <view class="list-col">{{item.student_name}}</view>
+  <view class="list-col">{{item.course_name}}</view>
+</view>
+<modal hidden="{{hiddenmodalput}}" title="总结" confirm-text="提交" cancel-text="重置" bindcancel="cancel" bindconfirm="confirm"> 
+ <textarea bindinput="inputComments" placeholder="请输入内容" auto-focus></textarea>
+</modal>
+</view>

@@ -1,0 +1,4 @@
+/* coach/pages/salary/salary.wxss */
+page{
+  background-color: #000;
+}

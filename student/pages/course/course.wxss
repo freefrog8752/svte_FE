@@ -1,0 +1,138 @@
+/* miniprogram/pages/course.wxss */
+.category{
+  margin:20rpx 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+.yellow{
+  color:#ffd92e;
+}
+.subcate{
+  height: 30rpx;
+}
+.week-header,.week-header-sec{
+  height:80rpx;
+line-height:80rpx;
+display:flex;
+justify-content:space-between;
+padding:0 20rpx;
+color:#fff;
+}
+.week-header-sec{
+  padding: 0;
+}
+.week-header-cell{
+  flex: 1;
+  text-align: center;
+}
+.weekday-table{
+  height: 90vh;
+  background: #fff;
+}
+.tr{
+  height: 100rpx;
+  display: flex;
+}
+.td{
+  border:1rpx solid #c1c1c1;
+justify-content:center;
+width:100%;
+border-collapse:collapse;
+flex:1;
+align-items:center;
+display:flex;
+}
+
+.tab-nav{
+  display: flex;
+  line-height: 30px;
+  background-color: #fff;
+}
+.tab-btn{
+  flex: 1;
+  text-align: center;
+  color: rgba(126,126,126,.5);
+  font-weight: bold;
+}
+.tab-btn-hover{
+  border-bottom: 3px solid #f00707;
+  color: black;
+}
+.my-course-panel-box{
+  
+}
+.course-box{
+  display: flex;
+  flex-direction: column;
+}
+.course-item{
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size:12px;
+}
+.book-course,.cancle-course{
+  color: #f00707;
+}
+.empty-course-box{
+  line-height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.course-history image{
+  max-width: 20px;
+  max-height: 20px;
+}
+.course-history{
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 93%;
+  margin: 10px auto;
+}
+.course-history:nth-last-of-type(1){
+  margin-bottom: 0;
+}
+.tab-content{
+  
+}
+.tab-box{
+  background-color: #e2dddd;
+  padding-top: 1px;
+}
+.course-history view{
+  line-height: 30px;
+}
+.history-title{
+  font-weight: bold;
+}
+.history-info{
+  font-size: 14px;
+  color: grey;
+}
+.history-pic{
+  display: flex;
+}
+.history-pic>view:nth-of-type(2){
+  line-height: 20px;
+  margin-left: 10px;
+}
+.rest{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color:#c1c1c1; 
+  text-align: center;
+}
+.course{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #FFF8DC;
+  text-align: center;
+}
+.savesetting{background-color: #ffd92e;color:#fff; width: 500rpx}

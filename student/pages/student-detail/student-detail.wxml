@@ -1,0 +1,50 @@
+<!--pages/user/user.wxml-->
+<view class="setting-wrap">
+<view class='usercenter'>
+  <!-- <image class='bg' src='http://doit.svte.cn/images/bg.png'></image> -->
+
+  <view class='head'>
+    <image class='headphoto' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527012622367&di=9b38557da3add3f472507b185509dca5&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201504%2F16%2F20150416H4223_mQCGe.jpeg'></image>
+    <view class='photobg'>
+      <image class='camera' src='http://doit.svte.cn/images/camera.png'></image>
+    </view>
+  </view>
+</view>
+
+<!--基本信息盒模型  -->
+<view class='basic'>
+  <text class='setting-title'>基本信息</text>
+
+  <!--名字部分  -->
+  <view class='setting-input-wrap'>
+    <!-- <text class='name'>性别</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+     <input class="setting-input" bindinput="inputName" placeholder="姓名" placeholder-class='textcolor'  value='{{user.name}}'></input>
+      </view>
+    <view class='setting-input-wrap'>
+        <!-- <text class='picker-text'>性别:</text> -->
+
+        <picker style="display:inline-block;line-height: 90rpx;padding-left: 20rpx;" bindchange="pickerFiled" value="{{fIndex}}" range="{{fileds}}">
+          <view class="field" style="padding-left:20rpx;">{{fileds[fIndex]}}</view>
+        </picker>
+      </view>
+
+  <!--手机号部分  -->
+  <view class='setting-input-wrap'>
+    <!-- <text class='name'>手机号</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <input class="setting-input" bindinput="inputPhone" placeholder="手机号" placeholder-class='textcolor'  value='{{user.phone}}'></input>
+  </view>
+
+  <view class='setting-input-wrap'>
+    <!-- <text class='name'>年龄</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <input class="setting-input" bindinput="inputAge" placeholder="年龄" placeholder-class='textcolor' value='{{user.age}}'></input>
+    <!-- <text class='nametext'>{{user.age}}</text> -->
+  </view>
+</view>
+
+<view class='btn-area'>
+<button class='back' bindtap='addUser'>保存</button>
+</view>
+</view>

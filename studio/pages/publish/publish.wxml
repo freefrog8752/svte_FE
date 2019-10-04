@@ -1,0 +1,46 @@
+<!--pages/user/user.wxml-->
+<!--基本信息盒模型  -->
+<view class='basic'>
+  <text class='basictext'></text>
+ <!--名字部分  -->
+  <view class='namebox'>
+    <view><text class='name'>标题</text></view>
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <view>
+    <input placeholder-class='textcolor' bindinput='inputTitle' value='{{msg.title}}'  class='nametext'></input></view>
+  </view>
+
+  <!--名字部分  -->
+  <view class='namebox' style='height:250rpx;'>
+    <text class='name'>内容</text>
+    <textarea bindinput='inputContent' style='text-align:left;' value='{{msg.content}}'  class='nametext'></textarea>
+  </view>
+
+ 
+      <view class=''>
+      <view class='contract-head'>
+     <view>
+  <text class='contract-head-text'>上传图片</text></view>
+  <view>
+  <button class='addbtn' data-type="2" bindtap="chooseImage" >添加图片</button>
+  </view>
+  </view>
+    <view class="question-images-area">
+    <!-- 图片缩略图  -->
+    <view class="question-images">
+      <block wx:for="{{images}}" wx:key="{{item.id}}">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{path}}{{item.path}}" mode="aspectFill" data-type="2" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-idx="{{index}}" data-type="2" bindtap="removeImage">删除</view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+  </view>
+      
+</view> 
+
+ <view class='complete'>
+    <view  class='btn' bindtap="addMsg">保存</view>
+  </view>

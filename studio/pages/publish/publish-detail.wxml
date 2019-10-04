@@ -1,0 +1,11 @@
+<!--studio/pages/publish/publish-detail.wxml-->
+<view class='wrapper'>
+<view class="title">{{title}}</view>
+<view class="img"><image src="{{path}}{{img.path}}"></image></view>
+<view class="content">{{content}}</view>
+
+</view>
+
+<view class='btn-area'>
+<button class='back' bindtap="deleteMessage">删除</button>
+</view>

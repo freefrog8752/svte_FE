@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="background">
+  <image class='bgimg' src='http://doit.svte.cn/images/background.jpeg' mode='scaleToFill'></image>
+  <view style="position:absolute;top:50px;left:30px;">
+  <view style="positon:absolute;top:50px;color:#fff;z-index: 999;font-size:35px;">欢迎使用</view>
+  <view style="positon:absolute;top:80px;color:#fff;z-index: 999;font-size:35px;">SVTE</view>
+  <view style="positon:absolute;top:120px;color:#fff;z-index: 999;">使用SVTE 轻松管理</view><view style="positon:absolute;top:140px;color:#fff;z-index: 999;">健身工作室</view>
+  </view>
+  <button wx:if="{{descOnly==0}}" style='width:40%;width: 40%;position: relative;bottom: 200px;background-color:#ffc300;color:#fff;' open-type="getUserInfo" bindgetuserinfo='login'>授权体验</button>
+  <button style='margin-top:40rpx;width: 40%;position: relative;bottom: 200px;background-color:#c4c4c4;color:#fff;' bindtap="exit">暂不体验</button>
+  <button wx:if="{{descOnly==1}}" style='width:40%;width: 40%;position: relative;bottom: 200px;background-color:#ffc300;color:#fff;' open-type="getUserInfo" bindgetuserinfo='gotoDesc'>授权</button>
+  <!-- <view style='position: relative;bottom: 200px;color:#fff;display: flex;justify-content: center;line-height: 24px;'> <checkbox-group bindchange="isSingleChange">
+  <label class="checkbox">
+    <checkbox value="{{isChecked}}" checked="{{isChecked}}"/>
+  </label>
+</checkbox-group><text>仔细阅读并同意以下协议</text><navigator url="../tc/tc"><text style="color:#ffc300;">《服务协议》</text></navigator></view> -->
+</view>
+

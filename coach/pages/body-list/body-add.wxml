@@ -1,0 +1,57 @@
+<!--coach/pages/user-info/user-setting.wxml-->
+<view class="setting-bg">
+  <view class="setting-wrap">
+
+
+    <view class='basic' >
+      <view class='setting-title'>体参信息</view>
+
+      <!--名字部分  -->
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="体重" placeholder-class='textcolor' bindinput='inputweight' value='{{body.weight}}'></input>
+      </view>
+  <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="体脂率" placeholder-class='textcolor' bindinput='inputBF' value='{{body.bodyFat}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="身体水分含量" placeholder-class='textcolor' bindinput='inputSSHL' value='{{body.shentishuifenhanliang}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="骨骼肌" placeholder-class='textcolor' bindinput='inputGGJ' value='{{body.gugeji}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="基础代谢" placeholder-class='textcolor' bindinput='inputJCDX' value='{{body.jichudaixie}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="身体年龄" placeholder-class='textcolor' bindinput='inputSTNL' value='{{body.shentinianling}}'></input>
+      </view>
+<view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="胸围" placeholder-class='textcolor' bindinput='inputXW' value='{{body.xiongwei}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="左臂围" placeholder-class='textcolor' bindinput='inputZBW' value='{{body.zuobiwei}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="右臂围" placeholder-class='textcolor' bindinput='inputYBW' value='{{body.youbiwei}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="腰围" placeholder-class='textcolor' bindinput='inputYW' value='{{body.yaowei}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="左大腿围" placeholder-class='textcolor' bindinput='inputZDTW' value='{{body.zuodatuiwei}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="右大腿围" placeholder-class='textcolor' bindinput='inputYDTW' value='{{body.youdatuiwei}}'></input>
+      </view>
+      <view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="左小腿围" placeholder-class='textcolor' bindinput='inputZXTW' value='{{body.zuoxiaotuiwei}}'></input>
+      </view><view class='setting-input-wrap'>
+        <input class="setting-input" placeholder="右小腿围" placeholder-class='textcolor' bindinput='inputYXTW' value='{{body.youxiaotuiwei}}'></input>
+      </view>
+  </view>
+
+      <view class='btn-area'>
+        <button class='savesetting' bindtap='gotoEdit'>保存</button>
+      </view>
+  </view>
+  </view>

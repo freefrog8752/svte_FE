@@ -1,0 +1,87 @@
+<!--pages/user/user.wxml-->
+<view class="setting-wrap">
+<view class='usercenter'>
+  <!-- <image class='bg' src='http://doit.svte.cn/images/bg.png'></image> -->
+
+  <view class='head'>
+    <image class='headphoto' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527012622367&di=9b38557da3add3f472507b185509dca5&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201504%2F16%2F20150416H4223_mQCGe.jpeg'></image>
+    <view class='photobg'>
+      <image class='camera' src='http://doit.svte.cn/images/camera.png'></image>
+    </view>
+  </view>
+</view>
+
+<!--基本信息盒模型  -->
+<view class='basic'>
+  <text class='setting-title'>基本信息</text>
+
+  <!--名字部分  -->
+   <view class='setting-input-wrap'>
+        <text class='picker-text'>性别</text>
+
+        <text class='setting-input'>{{coach.gender==0?'女':'男'}}</text>
+      </view>
+
+  <!--手机号部分  -->
+ <view class='setting-input-wrap'>
+    <!-- <text class='name'>手机号</text> -->
+    <!-- <image class='nameicon' src='../../../res/img/righticon.png'></image> -->
+    <input class="setting-input" placeholder="年龄" placeholder-class='textcolor' disabled="true" value='年龄：{{coach.birthdate}}'></input>
+  </view>
+  <!--微博昵称  -->
+   <view class='setting-input-wrap'>
+    <input class="setting-input" placeholder="工作经验" placeholder-class='textcolor' disabled="true" value='工作经验：{{coach.work_years}}'></input>
+  </view>
+ 
+   <view class='setting-input-wrap'>
+    <input class="setting-input" placeholder="课程种类" placeholder-class='textcolor' disabled="true" value='课程种类：{{coursesList}}'></input>
+  </view>
+   <view class='setting-input-wrap'>
+    <input class="setting-input" placeholder="职业证书" placeholder-class='textcolor' disabled="true" value='职业证书：{{coach.certificate}}'></input>
+  </view>
+
+   <view class='setting-input-wrap'>
+    <input class="setting-input" placeholder="擅长种类" placeholder-class='textcolor' disabled="true" value='擅长种类：{{coach.goodat}}'></input>
+  </view>
+  
+
+</view>
+<view class='basic' wx:if="{{type == 4}}">
+        <view class='setting-title'>上传照片</view>
+
+        <!--名字部分  -->
+        <view class='contract-head'>
+          <view>
+            <button class='addbtn' style="width: 200rpx;height: 200rpx;line-height: 200rpx;" bindtap="chooseImage">添加图片</button>
+          </view>
+        </view>
+        <view class="question-images-area">
+          <!-- 图片缩略图  -->
+          <view class="question-images">
+            <block wx:for="{{images}}" wx:key="{{item.id}}">
+              <view class="q-image-wrap">
+                <image class="q-image" src="{{path}}{{item.path}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+                <view class="q-image-remover" data-id="{{item.id}}" data-idx="{{index}}"  bindtap="removeImage">删除</view>
+              </view>
+            </block>
+          </view>
+
+        </view>
+      </view>
+  <view class='basic'>
+  <text class='setting-title'>工资设置</text>
+  <view class='setting-input-wrap'>
+    <input class="setting-input" placeholder="课提比" placeholder-class='textcolor'  bindinput="inputCourse" value='{{coach.course_percentage}}'></input>
+  </view>
+<view class='setting-input-wrap'>
+    <input class="setting-input" placeholder="消提比" placeholder-class='textcolor' bindinput="inputReduce"  value='{{coach.reduce_course_percentage}}'></input>
+  </view>
+<view class='setting-input-wrap'>
+    <input class="setting-input" placeholder="底薪" placeholder-class='textcolor' bindinput="inputBase"  value='{{coach.base_salary}}'></input>
+  </view>
+</view>
+<view class='btn-area'>
+<!-- <button class='back' open-type="navigateBack">保存</button> -->
+<button class='back'  bindtap='delUser'>删除</button>
+</view>
+</view>

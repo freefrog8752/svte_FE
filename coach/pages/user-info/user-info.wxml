@@ -1,0 +1,26 @@
+<view class='usercenter'>
+ 
+  <view class='head'>
+    <image class='headphoto' src='{{coach.photo}}'></image>
+    <view class='head-name'>{{coach.name}}</view>
+  </view>
+  <view class='second-section'>
+  <view class='second-section-child'><navigator url="user-setting?type=1">数据统计</navigator></view>
+  <view class='second-section-child'><navigator url="user-setting?type=2">课程种类</navigator></view>
+  </view>
+</view>
+
+<!--基本信息盒模型  -->
+<view class='basic'>
+   <view class='basic-row'>
+  <view class='basic-row-child'><navigator url="user-setting?type=3">个人设置</navigator></view>
+  <view class='basic-row-child'><navigator url="user-setting?type=4">上传照片</navigator></view>
+  <view class='basic-row-child'><navigator url="user-setting?type=5">个人擅长</navigator></view>
+  <view class='basic-row-child'><navigator url="user-setting?type=6">职照证书</navigator></view>
+  </view>
+  <!-- <view class='basic-row'>
+   -->
+  <!-- <view class='basic-row-child'><navigator url="user-setting?type=7">职业信息</navigator></view> -->
+  <!-- <view class='basic-row-child'></view>
+  </view> -->
+</view>
