@@ -20,7 +20,7 @@
       <view class='setting-input-wrap'>
         <text class='picker-text'>选择课程</text>
 
-        <picker style="display:inline-block" bindchange="pickerCourse" value="{{cIndex}}" range="{{courses}}">
+        <picker style="display:inline-block" bindchange="pickerCourse" range-key="name" value="{{cIndex}}" range="{{courses}}">
           <view class="field" style="padding-left:20rpx;">{{selCourse?selCourse:'请选择'}}</view>
         </picker>
       </view>

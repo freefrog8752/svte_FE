@@ -1,0 +1,245 @@
+/* pages/user/user.wxss */
+
+/*虚化背景  */
+
+page {
+  width: 100%;
+  /* height: 100vh; */
+  background-color: rgba(10, 10, 14, .8);
+  position: absolute;
+}
+
+.bg {
+  width: 750rpx;
+  height: 100%;
+  position: absolute;
+}
+
+/*头部盒模型  */
+
+.head {
+  display: table;
+  position: relative;
+  padding-top: 50rpx;
+  margin: 0 auto;
+}
+
+/*头部照片  */
+
+.headphoto {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  /* box-shadow: 0px 5px 2px #888888; */
+}
+
+/*相机背景  */
+
+.photobg {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #ffd92e;
+  position: absolute;
+  border-radius: 50%;
+  top: 142rpx;
+  right: -2px;
+}
+
+/*相机icon  */
+
+.camera {
+  width: 26rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12rpx;
+  margin-left: -13rpx;
+  z-index: 1;
+}
+
+/*基本信息  */
+
+.basic {
+  padding-left: 20px;
+  display: block;
+  padding-right: 40rpx;
+  /* width: 100%; */
+  /* margin-top: 70rpx; */
+}
+
+/*信息文本  */
+
+.basictext {
+  font-size: 30rpx;
+  color: #ffd92e;
+  display: block;
+  margin-top: 40rpx;
+}
+.contract-head-text {
+  font-size: 30rpx;
+  color: #ffd92e;
+  display: block;
+ flex: 1;
+}
+.namebox {
+  width: 100%;
+  height: 60rpx;
+  border-bottom: 1rpx solid #828282;
+  margin-top: 30rpx;
+  padding-bottom: 70rpx;
+}
+
+.name {
+  font-size: 33rpx;
+  color: #ffd92e;
+  float: left;
+  line-height: 90rpx;
+padding-left: 20px;
+}
+
+.nametext {
+  font-size: 33rpx;
+  color: #ffd92e;
+  float: right;
+  padding-right: 25rpx;
+  text-align: right;
+}
+
+.mode {
+  position: relative;
+  z-index: 1;
+  font-size: 33rpx;
+  color: #ffd92e;
+  float: right;
+  padding-right: 25rpx;
+  text-align: right;
+}
+
+.field{
+  position: relative;
+  z-index: 1;
+  font-size: 33rpx;
+  color: #ffd92e;
+  float: right;
+  padding-right: 25rpx;
+  text-align: right;
+  line-height: 90rpx;
+}
+
+.nameicon {
+  width: 18rpx;
+  height: 32rpx;
+  float: right;
+  padding-top: 8rpx;
+  padding-right: 5rpx;
+}
+.addbtn{
+  font-size: 30rpx;
+  color: #ffd92e;
+  
+  text-align: center;
+  line-height: 70rpx;
+  width: 150rpx;
+  height: 70rpx;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3rpx solid #ffd92e;
+  border-radius: 25rpx;
+}
+.back {
+  font-size: 30rpx;
+  color: #ffd92e;
+  display: block;
+  text-align: center;
+  line-height: 70rpx;
+  width: 300rpx;
+  height: 70rpx;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3rpx solid #ffd92e;
+  border-radius: 25rpx;
+  /* position: absolute; */
+  /* left: 50%; */
+  /* margin-left: -65rpx; */
+  /* bottom: 70rpx; */
+}
+.contract-head{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:30rpx;
+
+}
+.btn-area{
+  margin-top:40rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.setting-title{
+  font-size: 20px;
+  color:#ffd92e;
+  text-align: center;
+  width:100%;
+  padding-top:20rpx;
+}
+.textcolor{
+  color:rgba(255,217,46,.5);
+}
+.setting-input-wrap{
+  height: 90rpx;
+  width: 100%;
+  background-color:rgba(255,255,255,.1);
+  color:#ffd92e;
+  margin: 40rpx 0;
+}
+.setting-input{
+  line-height: 90rpx;
+  height: 90rpx;
+  padding-left: 40rpx;
+}
+.savesetting{background-color: #ffd92e;color:#fff; width: 500rpx}
+.picker-text{line-height: 90rpx;padding-left: 40rpx;}
+
+.question-images-area {
+  padding: 40rpx 0;
+}
+
+.question-images-tool {
+  display: flex;
+  align-items: center;
+}
+
+.question-images {
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.q-image-wrap {
+  width: 31%;
+  margin-right: 10rpx;
+}
+
+.q-image {
+  flex: 1;
+  height: 200rpx;
+  width: 100%;
+}
+
+.q-image-remover {
+  text-align: center;
+}
+.setting-wrap{
+  width: 92%;
+  height: 100%;
+  left:4%;
+  right:4%;
+  position: relative;
+  top:45rpx;  
+  border-radius: 10px;
+  /* background-color: rgba(22,22,22,.4);
+   */
+   background-image: linear-gradient(-45deg,rgba(00, 00, 00, .4), rgba(44, 44, 44, .9));
+   /* background-image: linear-gradient(to left, red, yellow, blue, green); */
+}

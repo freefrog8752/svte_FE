@@ -71,10 +71,10 @@
   <view class='basic'>
   <text class='setting-title'>工资设置</text>
   <view class='setting-input-wrap'>
-    <input class="setting-input" placeholder="课提比" placeholder-class='textcolor'  bindinput="inputCourse" value='{{coach.course_percentage}}'></input>
+    <input class="setting-input" placeholder="销课数" placeholder-class='textcolor'  disabled="true" value='{{salary.reduce_salary}}'></input>
   </view>
 <view class='setting-input-wrap'>
-    <input class="setting-input" placeholder="消提比" placeholder-class='textcolor' bindinput="inputReduce"  value='{{coach.reduce_course_percentage}}'></input>
+    <input class="setting-input" placeholder="销售额" placeholder-class='textcolor' disabled="true"  value='{{salary.sales_salary}}'></input>
   </view>
 <view class='setting-input-wrap'>
     <input class="setting-input" placeholder="底薪" placeholder-class='textcolor' bindinput="inputBase"  value='{{coach.base_salary}}'></input>

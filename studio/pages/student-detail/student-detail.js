@@ -111,8 +111,19 @@ user:{}
         // console.log(that.data.user);
       },
     })
-  },
 
+    wx.request({
+      url: app.globalData.rootUrl + 'studio/' + app.globalData.studioId + '/student/' + id + '/plans',
+      success: data => {
+        this.setData({ coursesList: data.data.data });
+      }
+    })
+  },
+moreCourse:function(){
+  wx.navigateTo({
+    url: 'course-list?id='+this.data.id,
+  })
+},
   addContract: function () {
     wx.navigateTo({
       url: '../create-contract/create-contract?id='+this.data.id,

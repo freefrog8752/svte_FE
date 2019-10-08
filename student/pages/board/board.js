@@ -8,7 +8,7 @@ Page({
     remark: '仅保留30天内的消息',
     noMessageTitle: '暂无新消息',
     OnMoreButton: '加载更多',
-    pageSize: 10,
+    pageSize: 5,
     searchPageNum: 0,
     newLessonTemplateList: null,
     totalCount: 0,
@@ -50,7 +50,7 @@ changeList:function(e){
       searchPageNum:this.data.searchPageNum-1
     })
   }else{
-    if (this.data.msgList.length < 10) {
+    if (this.data.msgList.length < this.data.pageSize) {
       wx.showToast({
         title: '没有更多了',
       })
@@ -79,7 +79,7 @@ getList:function(){
   },
   onShow: function () {
     var that = this;
-
+    this.getList();
   },
   /**
      * 用户点击右上角分享

@@ -100,7 +100,22 @@
     <image class='nameicon' src='http://doit.svte.cn/images/righticon.png'></image>
    </view>
    </block>
+
+
+
+   <view class='contract-head'>
+  <text class='contract-head-text'>销课记录</text>
+  <!-- <button class='addbtn' bindtap='addBodyIndex'>添加</button> -->
+  <button class='addbtn' bindtap='moreCourse'>更多</button>
+  </view>
+  <block wx:for="{{courseList}}">
+<view wx:if="{{index < 3 && item.finish_time!=null }}"  style="z-index:999;" data-item="{{item}}"    class='namebox'>
+<text class='name'>{{item.course_name}}</text>
+    <text class='name'>{{item.finish_time}}</text>
+   </view>
+   </block>
 </view>
+ 
 
 
 

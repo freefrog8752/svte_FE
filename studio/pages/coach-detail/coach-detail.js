@@ -11,9 +11,9 @@ Page({
     images: [],
     path: 'https://doit.svte.cn',
     salary: {
-      "coursePercentage": '',
-      "baseSalary": '',
-      "reduceCoursePercentage":''
+      "sales_salary": 0,
+      "baseSalary": 0,
+      "reduce_salary":0
     }
   },
   inputCourse:function(e){
@@ -52,7 +52,13 @@ Page({
         console.log(that.data.images);
       }
     })
-    
+    wx.request({
+      url: app.globalData.rootUrl + 'studio/coache/' + this.data.coach.id + '/salary',
+      success: data => {
+        console.log(data.data.data[0]);
+        this.setData({ salary: data.data.data[0] });
+      }
+    })
     wx.request({
       url: app.globalData.rootUrl + 'coach/' + this.data.coach.id + '/course',
       success: data => {

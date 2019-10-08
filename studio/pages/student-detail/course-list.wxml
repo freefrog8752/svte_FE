@@ -1,0 +1,16 @@
+<view class="setting-wrap">
+
+<!--基本信息盒模型  -->
+<view class='basic'>
+ <view class='contract-head'>
+  <text class='contract-head-text'>销课记录</text>
+  <!-- <button class='addbtn' bindtap='addBodyIndex'>添加</button> -->
+  </view>
+<view wx:for="{{courseList}}" style="z-index:999;" data-item="{{item}}" class='namebox'>
+    <block wx:if="{{item.finish_time!=null}}">
+    <text class='name'>{{item.course_name}}</text>
+    <text class='name'>{{item.finish_time}}</text>
+    </block>
+   </view>
+</view>
+</view>

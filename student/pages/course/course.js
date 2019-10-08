@@ -96,6 +96,15 @@ Page({
       weekloffset: ld + offset
     });
     this.loadDates();
+    if (this.data.selCourseId){
+      wx.request({
+        url: app.globalData.globalUrl.getCoaches + '?courseId=' + this.data.selCourseId,
+        success: data => {
+          this.setData({ coaches: data.data.data });
+          this.showCoaches(1);
+        }
+      })
+    }
   },
   getDiffDate: function (start, end) {
     var startTime = this.getDate(start);

@@ -108,7 +108,7 @@ Page({
       })
     }
     wx.request({
-      url: app.globalData.rootUrl+'studio/1/coaches/'+this.data.coach.id,
+      url: app.globalData.rootUrl+'studio/'+app.globalData.studioId+'/coaches/'+this.data.coach.id,
       method:'put',
       data:this.data.coach,
       success:data=>{
@@ -156,6 +156,10 @@ Page({
   inputHei: function (e) {
     console.log(e);
     this.setData({ 'coach.height': e.detail.value });
+  },
+  inputWei: function (e) {
+    console.log(e);
+    this.setData({ 'coach.weight': e.detail.value });
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
