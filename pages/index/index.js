@@ -88,6 +88,9 @@ Page({
                                   "account": resp.code, "studioId": app.globalData.studioId, "roleId": 2, 'name': evt.detail.userInfo.nickName, 'gender': evt.detail.userInfo.gender, 'birthdate': '2020-01-01'
                                 },
                                 success: data => {
+                                  wx.showToast({
+                                    title: '注册成功，请再次授权',
+                                  })
                                   console.log(data);
                                 }
                               })
@@ -112,6 +115,9 @@ Page({
                                   "account": resp.code, "studioId": app.globalData.studioId, 'name': evt.detail.userInfo.nickName, 'gender': evt.detail.userInfo.gender, 'birthdate': '2020-01-01'
                                 },
                                 success: data => {
+                                  wx.showToast({
+                                    title: '注册成功，请再次授权',
+                                  })
                                   console.log(data);
                                 }
                               })
