@@ -6,6 +6,9 @@ justify-content:space-between;
 padding:0 20rpx;
 color:#fff;
 }
+
+.time-block{display:flex;flex-wrap:wrap;text-align: center;justify-content: space-around;align-items: center;}
+.time-text{width: 30%;margin-top:10rpx;height: 50rpx;line-height: 50rpx;border:1px solid #ffd92e;border-radius: 10rpx;}
 .savesetting{background-color: #ffd92e;color:#fff; width: 200rpx;font-size:12px;}
 .category{
   padding:40rpx 0;
@@ -47,16 +50,16 @@ align-items:center;
 display:flex;
 }
 .rest{
-  width: 100%;
+  /* width: 100%;
   height: 100rpx;
-  line-height: 100rpx;
+  line-height: 100rpx; */
   background-color:#c1c1c1; 
   text-align: center;
 }
 .course{
-  width: 100%;
+  /* width: 100%;
   height: 100rpx;
-  line-height: 100rpx;
+  line-height: 100rpx; */
   background-color: #FFF8DC;
   text-align: center;
 }

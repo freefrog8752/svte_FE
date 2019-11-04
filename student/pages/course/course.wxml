@@ -11,35 +11,18 @@
       <!-- <view class="subcate" bindtap="checkCate" data-cate="1">私教课</view> -->
     </view>
     <view class="tab-content">
-
+      <wxs src="course.wxs" module="tool">
+</wxs>
       <view wx:if="{{showBox == 1}}" class="tab-box"  style='background:#000;'>
         <!--coach/pages/course/course.wxml-->
         <view>
-          <view class='week-header'>
-            <view bindtap='changeDuration' data-type="0">上一周</view>
-            <view>{{currentFirst}} - {{currentLast}}</view>
-            <view bindtap='changeDuration' data-type="1">下一周</view>
-          </view>
-          <view class='week-header-sec'>
-            <view class='week-header-cell' wx:for="{{dates}}">{{item.simple}}</view>
-          </view>
+          <weekCalendar timeBean="{{timeBean}}" bind:lastWeek="lastWeek" bind:nextWeek="nextWeek" bind:dayClick="dayClick"></weekCalendar>
           <scroll-view scroll-y="true" class='weekday-table'>
-            <block wx:for="{{times}}" wx:key="t" wx:for-item='t'>
-              <view class='tr'>
-                <block wx:for="{{dates}}" wx:key="d" wx:for-item='d'>
-                  <view wx:if="{{d.simple}}" class='td' data-date="{{d}}" data-time="{{t}}">
-<block wx:for="{{courses}}" wx:for-item='c'>
-            <view bindtap='setCourse' data-idx="{{index}}" data-date="{{d}}" data-p="{{c}}" data-time="{{t}}" wx:if="{{t==c.time&&c.date==d.simple}}" style="font-size:12px;" class="{{c.can_apply?(d.simple+t==issel?'course':''):'rest'}}">
-              {{c.isRest == 1?'休息':c.course_name}}
-            </view>
-            </block>
-                  </view>
-                  <view wx:else class='td' data-date="{{d}}" data-time="{{t}}">
-        {{t}}
-                  </view>
-                </block>
+            <view class="time-block">
+              <view class="time-text {{tool.getCanApply(index,disableIndexs)?'rest':(tool.getGroup(index,groupIndexArr)?'course':(time==item?'seltime':''))}}" bindtap="chooseCourse" data-disabled="{{tool.getCanApply(index,disableIndexs)}}" data-groupitem="{{tool.getGroupItem(index,groupIndexArr,groupArr)}}"  data-time="{{item}}" wx:for="{{times}}">
+                {{item}}
               </view>
-            </block>
+            </view>
           </scroll-view>
         </view>
       </view>
@@ -89,6 +72,13 @@
  <text class="{{selCourseId == item.id?'yellow':''}}">课程{{index+1}}:{{item.name}}</text>
  </view>
  </block> -->
+</modal>
+<modal hidden="{{hideClist}}" title="" bindcancel="cancelC" confirm-text="选择" bindconfirm="confirmC"> 
+  <block wx:if="{{selcate == 1}}">
+ <view wx:for="{{canChooseCourses}}" data-c="{{item}}" bindtap="setCurrentCourse" style="line-height:60rpx;height: 60rpx;border-bottom: 1px solid rgba(71,71,71,.2);">
+ <text class="{{currentCourse.id == item.id?'yellow':''}}">{{index+1}}:{{item.name}}</text>
+ </view>
+ </block>
 </modal>
  <view wx:if="{{showBox == 1}}" class='btn-area'>
         <button class='savesetting' bindtap='savePlan'>保存</button>

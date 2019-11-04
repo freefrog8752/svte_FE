@@ -5,7 +5,14 @@
       <view class='cat-wrap'>
         <view class='cat-box'>
           <block >
-            <view class='cat-item'><input bindinput="courseName"></input></view>
+            <view class='cat-item'><input placeholder="课程名称" bindinput="courseName"></input></view>
+          </block>
+        </view>
+      </view>
+      <view class='cat-wrap'>
+        <view class='cat-box'>
+          <block >
+            <view class='cat-item'><input placeholder="时长" bindinput="courseDurition"></input></view>
           </block>
         </view>
       </view>

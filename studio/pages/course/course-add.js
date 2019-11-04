@@ -6,18 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-      courseName:''
+      courseName:'',
+      duration:''
 
   },
   courseName:function(e){
     this.setData({courseName:e.detail.value});
+  },
+  courseDurition: function (e) {
+    this.setData({ duration: e.detail.value });
   },
   addCourse:function(){
     let that = this;
     wx.request({
       url: app.globalData.rootUrl + 'studio/' + app.globalData.studioId + '/course',
       method:'post',
-      data: { name: that.data.courseName},
+      data: { name: that.data.courseName,duration:that.data.duration},
       success: function (res) {
         that.setData({
           courseList: res.data.data

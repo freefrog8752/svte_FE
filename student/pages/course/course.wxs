@@ -1,0 +1,32 @@
+var getCanApply = function (i, arr) {
+  var flag = false;
+  // console.log(i,arr);
+  if (arr.indexOf(i) >= 0) {
+    flag = true;
+  }
+  // console.log(flag);
+  return flag;
+};
+var getGroup =function(i,arr){
+  var flag = false;
+  // console.log(i, arr);
+  if (arr.indexOf(i) >= 0) {
+    flag = true;
+  }
+  // console.log(flag);
+  return flag;
+}
+var getGroupItem = function(i,arr,items){
+  var obj = {};
+  // console.log(arr, i)
+  if (arr.indexOf(i) >= 0) {
+    
+    obj = items[arr.indexOf(i)];
+  }
+return obj;
+}
+module.exports = {
+  getCanApply: getCanApply,
+  getGroup: getGroup,
+  getGroupItem: getGroupItem
+}

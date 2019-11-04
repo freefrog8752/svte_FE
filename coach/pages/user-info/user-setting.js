@@ -33,7 +33,7 @@ Page({
     this.setData({type:options.type,coach:app.globalData.coach});
     console.log(this.data.coach);
     wx.request({
-      url: app.globalData.rootUrl + 'studio/1/course',
+      url: app.globalData.rootUrl + 'studio/'+app.globalData.studioId+'/course',
       success:data=>{
         this.setData({courses:data.data.data});
       }
